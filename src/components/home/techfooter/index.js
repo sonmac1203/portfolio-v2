@@ -1,0 +1,1 @@
+export { TechFooter } from './TechFooter';
