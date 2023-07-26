@@ -1,42 +1,111 @@
+import { useEffect, useContext, useState } from 'react';
+import { SectionObserverContext } from '@/lib/context';
 import { SectionTitle } from '@/lib/components';
-import { useEffect } from 'react';
 
 export const About = ({ sectionRef }) => {
+  const { setCurrentSection } = useContext(SectionObserverContext);
+  const [extended, setExtended] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      const offsetThreshold = 0; // 5 rem in pixels (assuming 1rem = 16px)
-
       const rect = sectionRef.current.getBoundingClientRect();
       if (rect.bottom >= 0 && rect.top <= 0) {
-        console.log('ABOUT');
+        setCurrentSection('about');
       }
     };
-
-    // Attach the scroll event listener when the component mounts
+    window.removeEventListener('scroll', handleScroll);
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const extendButton = (
+    <span
+      onClick={() => setExtended(true)}
+      className='text-ivory font-normal cursor-pointer'
+    >
+      read more
+    </span>
+  );
+
+  const shrinkButton = (
+    <span
+      onClick={() => setExtended(false)}
+      className='text-ivory font-normal cursor-pointer'
+    >
+      Close <i className='fa-solid fa-xmark' />
+    </span>
+  );
+
   return (
-    <section id='about' className='pt-20' ref={sectionRef}>
+    <section
+      id='about'
+      className='pt-20 flex flex-col gap-y-4 font-light'
+      ref={sectionRef}
+    >
+      <SectionTitle>About</SectionTitle>
       <p>
-        Hi there! My name is Son Mac. I am a fourth-year undergraduate in
-        Electrical & Computer Engineering at the University of Arizona. Entering
-        college senior year, I have found myself really interested in software
-        development, especially in the frontend domain, so I am now doing my
-        best to pursue a career in this field later in the future. I enjoy
-        coding and have been taking courses to further my understanding about
-        programming principles, algorithms, and Web technologies. I started my
-        journey with C, fell in love with object-oriented C++, Java, Python, and
-        am now working with HTML, CSS, and JS on a regular basis. Currently, I
-        am looking for fulltime opportunities in software engineer / frontend
-        engineer for Summer and Fall 2023. Feel free to check out my resume and
-        I am always ready for a chat!
+        Hi! I am Son Mac, a{' '}
+        <span className='text-ivory font-normal'>recent graduate</span> from
+        University of Arizona. I like{' '}
+        <span className='text-ivory font-normal'>software</span>, and I enjoy
+        building things that improve people's life. While my experties lies in{' '}
+        <span className='text-bright font-normal'>frontend-focused</span> tech,
+        I can tackle <span className='text-bright font-normal'>fullstack</span>{' '}
+        projects with confidence. Recently, I kick-started my post-grad career
+        at <span className='text-ivory font-normal'>kmap.arizona.edu</span>,
+        where we develop{' '}
+        <span className='text-ivory font-normal'>
+          cutting-edge visualizations
+        </span>{' '}
+        for academic communities.
       </p>
+      <p>
+        When I am not on my laptop, I enjoy playing with my cat, drinking boba,
+        going on road trips, and spending weekends camping with my girlfriend.
+      </p>
+      <p>
+        I am seeking a <span className='text-ivory font-normal'>full-time</span>{' '}
+        opportunity in{' '}
+        <span className='text-bright font-normal'>
+          software engineering/frontend developer
+        </span>{' '}
+        starting in 2024. Check out my{' '}
+        <span className='text-bright font-normal'>resume</span>, or{' '}
+        {extendButton} about me.
+      </p>
+      {extended && (
+        <>
+          <p>
+            While it seems easy to talk about my passion now, it wasn’t like
+            this at first. I started out as a Civil Engineering major in
+            college, without knowing much about what I wanted to do with my
+            future. However, everything changed after an introductory C course I
+            attended in the second semester. As slow-witted as I was back then,
+            I knew that I had fallen in love with the maths, the logic, and
+            especially the code that hide behind those great applications.
+          </p>
+          <p>
+            Since then, I had built a computer processor in{' '}
+            <span className='text-ivory font-normal'>Assembly</span>, developed
+            applications in{' '}
+            <span className='text-ivory font-normal'>
+              C++, Java, and Python
+            </span>
+            , met a friend who introduced me to{' '}
+            <span className='text-ivory font-normal'>
+              fullstack development
+            </span>
+            , deployed a <span className='text-ivory font-normal'>website</span>{' '}
+            as a birthday gift for my girlfriend, got an internship at{' '}
+            <span className='text-ivory font-normal'>Shopify</span>, and almost
+            won the{' '}
+            <span className='text-ivory font-normal'>Best Software Design</span>{' '}
+            award in an engineering contest in my senior year. At the moment, I
+            am working to transform how academic programs and individuals
+            visualize data. {shrinkButton}
+          </p>
+        </>
+      )}
     </section>
   );
 };

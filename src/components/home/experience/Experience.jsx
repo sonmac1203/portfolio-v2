@@ -20,36 +20,43 @@ export const Experience = ({ sectionRef }) => {
   const content = [
     {
       title: 'Software Engineer',
-      employer: 'KMap',
+      employer: 'kmap.arizona.edu',
       description:
-        "Consistently deliver quality production code on a weekly basis, improving KMap's web interface, and contributing to key projects, including the migration to Next.js 12 and onboarding page redesign. Initiate the implementation and adoption of internal UI components for development efficiency and maintain effective communication with the data team over the management of public and private API endpoints.",
+        "Consistently deliver quality production code, improving KMap's web interface, and contribute to key projects, including the migration to Next.js 12 and onboarding page redesign. Implement and streamline internal UI components for development efficiency and maintain effective communication with data team over the management of public and private API endpoints.",
       time: 'Feb 2022 - Present',
       location: 'Tucson, AZ',
+      href: 'https://kmap.arizona.edu',
+      tech: 'Next,MongoDB,Python,JavaScript,D3,Mapbox',
     },
     {
-      title: 'Front-end Developer Intern',
+      title: 'Frontend Developer Intern',
       employer: 'Shopify Inc.',
       description:
-        'Enhanced the usability of Finances Overview page with 1000+ lines of production React code, addressing visual defects, introducing new skeleton components, and improving analytical charts. Worked on a back-end solution to identify and fix a significant mismatch between web-displayed and stored revenue for 10,000+ users.',
+        'Enhanced the usability of Finances Overview page with 1000+ lines of production React code, addressing visual defects, introducing new skeleton components, and improving analytical charts. Worked on a backend solution to identify and fix a significant mismatch between web-displayed and stored revenue for 10,000+ users.',
       time: 'May 2022 - Aug 2022',
       location: 'Remote',
+      href: 'https://www.shopify.com',
+      tech: 'React,TypeScript,SQL,GraphQL',
     },
     {
       title: 'Programming Lab Assistant',
-      employer: 'UArizona.',
+      employer: 'UArizona',
       description:
         'Facilitated weekly lab sessions/office hours to assist students with programming tasks and troubleshoot their C code, while helping instructors with designing assignments and grading exams.',
       time: 'Aug 2020 - Jan 2022',
-      location: 'Remote',
+      location: 'Tucson, AZ',
     },
   ];
 
   return (
-    <section id='experience' className='pt-20' ref={sectionRef}>
-      {/* <SectionTitle>Experience</SectionTitle> */}
-      <ul className='list-none flex flex-col gap-y-4'>
+    <section id='experience' className='pt-12 md:pt-20' ref={sectionRef}>
+      <SectionTitle className='mb-6'>Experience</SectionTitle>
+      <ul className='list-none flex flex-col gap-y-12'>
         {content.map(
-          ({ title, employer, description, time, location }, key) => (
+          (
+            { title, employer, description, time, location, tech, href },
+            key
+          ) => (
             <ExperienceCard
               title={title}
               employer={employer}
@@ -58,6 +65,8 @@ export const Experience = ({ sectionRef }) => {
               location={location}
               key={key}
               id={key}
+              tech={tech || null}
+              href={href || null}
             />
           )
         )}
