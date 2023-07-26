@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ContactFooter = () => {
   return (
-    <ul className='flex w-full gap-x-6 text-2xl mt-auto'>
+    <ul className='flex text-xl mt-5 lg:w-full lg:flex-row gap-x-6 lg:text-2xl lg:mt-auto text-bright'>
       <i className='fa-brands fa-linkedin' />
       <i className='fa-brands fa-github' />
       <i className='fa-brands fa-instagram' />
