@@ -1,25 +1,20 @@
 import { SectionTitle } from '@/lib/components';
 import { ExperienceCard } from './components';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
+import { SectionObserverContext } from '@/lib/context';
 
 export const Experience = ({ sectionRef }) => {
+  const { setCurrentSection } = useContext(SectionObserverContext);
   useEffect(() => {
     const handleScroll = () => {
-      const offsetThreshold = 0; // 5 rem in pixels (assuming 1rem = 16px)
-
       const rect = sectionRef.current.getBoundingClientRect();
-      if (rect.bottom >= 0 && rect.top <= 0) {
-        console.log('EXPERIENCE');
+      if (rect.bottom >= 0 && rect.top <= 20) {
+        setCurrentSection('experience');
       }
     };
-
-    // Attach the scroll event listener when the component mounts
+    window.removeEventListener('scroll', handleScroll);
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const content = [
@@ -27,7 +22,7 @@ export const Experience = ({ sectionRef }) => {
       title: 'Software Engineer',
       employer: 'KMap',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae sapien pellentesque habitant morbi tristique. Quis commodo odio aenean sed adipiscing diam donec. Fermentum odio eu feugiat pretium nibh ipsum.',
+        "Consistently deliver quality production code on a weekly basis, improving KMap's web interface, and contributing to key projects, including the migration to Next.js 12 and onboarding page redesign. Initiate the implementation and adoption of internal UI components for development efficiency and maintain effective communication with the data team over the management of public and private API endpoints.",
       time: 'Feb 2022 - Present',
       location: 'Tucson, AZ',
     },
@@ -35,7 +30,7 @@ export const Experience = ({ sectionRef }) => {
       title: 'Front-end Developer Intern',
       employer: 'Shopify Inc.',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae sapien pellentesque habitant morbi tristique. Quis commodo odio aenean sed adipiscing diam donec. Fermentum odio eu feugiat pretium nibh ipsum.',
+        'Enhanced the usability of Finances Overview page with 1000+ lines of production React code, addressing visual defects, introducing new skeleton components, and improving analytical charts. Worked on a back-end solution to identify and fix a significant mismatch between web-displayed and stored revenue for 10,000+ users.',
       time: 'May 2022 - Aug 2022',
       location: 'Remote',
     },
@@ -43,7 +38,7 @@ export const Experience = ({ sectionRef }) => {
       title: 'Programming Lab Assistant',
       employer: 'UArizona.',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae sapien pellentesque habitant morbi tristique. Quis commodo odio aenean sed adipiscing diam donec. Fermentum odio eu feugiat pretium nibh ipsum.',
+        'Facilitated weekly lab sessions/office hours to assist students with programming tasks and troubleshoot their C code, while helping instructors with designing assignments and grading exams.',
       time: 'Aug 2020 - Jan 2022',
       location: 'Remote',
     },
