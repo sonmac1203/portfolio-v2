@@ -1,10 +1,6 @@
-import styles from './LeftColumn.module.css';
-
 export const LeftColumn = ({ children }) => {
   return (
-    <div
-      className={`${styles.Main} sm:h-screen sm:sticky sm:top-0 flex flex-col pt-20 pb-10`}
-    >
+    <div className='flex flex-col lg:h-screen lg:sticky lg:top-0 lg:flex-col lg:pt-20 lg:pb-10 lg:col-span-1'>
       {children}
     </div>
   );
