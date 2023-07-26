@@ -1,13 +1,17 @@
 import Link from 'next/link';
 import { NavItem } from './components';
+import { useContext } from 'react';
+import { SectionObserverContext } from '@/lib/context';
 
 export const Nav = () => {
+  const { currentSection } = useContext(SectionObserverContext);
+
   return (
     <section className='mt-20'>
-      <ul className='list-none'>
-        <NavItem label='About' active />
-        <NavItem label='Experience' />
-        <NavItem label='Projects' />
+      <ul className='list-none flex flex-col gap-y-5'>
+        <NavItem label='About' active={currentSection === 'about'} />
+        <NavItem label='Experience' active={currentSection === 'experience'} />
+        <NavItem label='Projects' active={currentSection === 'projects'} />
         <NavItem label='Now' />
       </ul>
     </section>

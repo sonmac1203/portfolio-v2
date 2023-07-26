@@ -1,0 +1,12 @@
+.Slide .Bar {
+  transition: width 0.2s ease;
+}
+
+.Slide:hover .Bar, .Slide.Active .Bar {
+  width: 4.5rem;
+}
+
+.Slide .Text {
+  transition: transform 0.2s ease;
+}
+
