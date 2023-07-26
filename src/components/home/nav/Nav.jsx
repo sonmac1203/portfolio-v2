@@ -7,7 +7,7 @@ export const Nav = () => {
   const { currentSection } = useContext(SectionObserverContext);
 
   return (
-    <section className='mt-20'>
+    <section className='hidden lg:block mt-20'>
       <ul className='list-none flex flex-col gap-y-5'>
         <NavItem label='About' active={currentSection === 'about'} />
         <NavItem label='Experience' active={currentSection === 'experience'} />

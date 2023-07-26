@@ -4,6 +4,11 @@
 
 .Slide:hover .Bar, .Slide.Active .Bar {
   width: 4.5rem;
+  background-color: #F4F9E9;
+}
+
+.Slide:hover .Text, .Slide.Active .Text {
+  color: #F4F9E9;
 }
 
 .Slide .Text {
