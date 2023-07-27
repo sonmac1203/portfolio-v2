@@ -19,13 +19,13 @@ export const metadata = {
     title: 'Son Mac | Personal website',
     description: 'Personal website of Son Mac',
     url: 'https://www.sonmac.me',
-    images: [
-      {
-        url: 'https://drive.google.com/uc?id=10SqUacEbE7gWVBzBGVBaqf6Kq353E8n-',
-        width: 300,
-        height: 300,
-      },
-    ],
+    // images: [
+    //   {
+    //     url: 'https://res.cloudinary.com/dbugposxw/image/upload/v1690478242/android-chrome-512x512_qgakh7.png',
+    //     width: 300,
+    //     height: 300,
+    //   },
+    // ],
     locale: 'en_US',
     type: 'website',
   },
@@ -42,7 +42,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const thumbnailUrl =
-    'https://drive.google.com/uc?id=10SqUacEbE7gWVBzBGVBaqf6Kq353E8n-';
+    'https://res.cloudinary.com/dbugposxw/image/upload/v1690478242/android-chrome-512x512_qgakh7.png';
 
   return (
     <html lang='en' className='bg-indigo'>
@@ -54,10 +54,10 @@ export default function RootLayout({ children }) {
           strategy='afterInteractive'
         />
         <meta property='og:image' content={thumbnailUrl} />
-        {/* <meta property='og:image:secure_url' content={thumbnailUrl} />
+        <meta property='og:image:secure_url' content={thumbnailUrl} />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:height' content='300' />
-        <meta property='og:image:width' content='300' /> */}
+        <meta property='og:image:width' content='300' />
       </head>
       <body
         className={`${inter.className} text-ash bg-gradient-to-r from-gunmetal via-prussian to-gunmetal`}
