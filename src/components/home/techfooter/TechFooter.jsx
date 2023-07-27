@@ -3,6 +3,7 @@ export const TechFooter = () => {
   const tailwindLink = 'https://tailwindcss.com';
   const brittanyLink = 'https://brittanychiang.com';
   const sourceCodeLink = 'https://github.com/sonmac1203/portfolio-v2';
+  const prevVersionLink = 'https://sonmac1203.github.io/';
 
   return (
     <footer className='mt-auto text-center text-xs md:text-sm pt-20'>
@@ -22,7 +23,10 @@ export const TechFooter = () => {
       <a className='text-bright' href={sourceCodeLink} target='_blank'>
         here
       </a>
-      . You can also see the previous version here.
+      . You can also see the previous version{' '}
+      <a className='text-bright' href={prevVersionLink} target='_blank'>
+        here.
+      </a>
     </footer>
   );
 };
