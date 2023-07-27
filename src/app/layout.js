@@ -19,13 +19,6 @@ export const metadata = {
     title: 'Son Mac | Personal website',
     description: 'Personal website of Son Mac',
     url: 'https://www.sonmac.me',
-    // images: [
-    //   {
-    //     url: 'https://res.cloudinary.com/dbugposxw/image/upload/v1690478242/android-chrome-512x512_qgakh7.png',
-    //     width: 300,
-    //     height: 300,
-    //   },
-    // ],
     locale: 'en_US',
     type: 'website',
   },
