@@ -37,8 +37,8 @@ export const ExperienceCard = ({
         )}
         <p className='text-sm leading-5 font-light mb-3'>{description}</p>
         <div className='flex items-center gap-x-3 gap-y-2 flex-wrap text-sm'>
-          {techArray.map((techText) => (
-            <Pill text={techText} />
+          {techArray.map((techText, key) => (
+            <Pill text={techText} key={key} />
           ))}
         </div>
       </div>

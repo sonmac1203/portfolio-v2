@@ -89,7 +89,7 @@ export const About = ({ sectionRef }) => {
       {extended && (
         <>
           <p>
-            While it seems easy to talk about my passion now, it wasn’t like
+            While it seems easy to talk about my passion now, it was not like
             this at first. I started out as a Civil Engineering major in
             college, without knowing much about what I wanted to do with my
             future. However, everything changed after an introductory C course I

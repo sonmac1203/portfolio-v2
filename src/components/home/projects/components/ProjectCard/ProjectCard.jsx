@@ -52,8 +52,8 @@ export const ProjectCard = ({
           )}
         </div>
         <div className='flex items-center gap-x-3 gap-y-2 flex-wrap text-sm mt-3'>
-          {techArray.map((techText) => (
-            <Pill text={techText} />
+          {techArray.map((techText, key) => (
+            <Pill text={techText} key={key} />
           ))}
         </div>
       </div>
