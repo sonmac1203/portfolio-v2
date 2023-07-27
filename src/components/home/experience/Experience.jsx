@@ -26,7 +26,7 @@ export const Experience = ({ sectionRef }) => {
       time: 'Feb 2022 - Present',
       location: 'Tucson, AZ',
       href: 'https://kmap.arizona.edu',
-      tech: 'Next,MongoDB,Python,JavaScript,D3,Mapbox',
+      tech: 'Next,JavaScript,MongoDB,Python,D3,Mapbox',
     },
     {
       title: 'Frontend Developer Intern',

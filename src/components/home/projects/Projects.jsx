@@ -11,7 +11,8 @@ export const Projects = ({ sectionRef }) => {
         'Leading a team of 5 engineering students to create a cutting-edge health monitoring system that seamlessly connects researchers and patients through Amazon Alexa devices, complemented by a full-stack web application built in Next.js.',
       photoName: 'antaris-project.svg',
       tech: 'Next,Node,Amazon Alexa API,MongoDB',
-      report: 'haha',
+      href: 'https://github.com/sonmac1203/antaris-web',
+      demo: 'https://drive.google.com/file/d/1r2Wvm40ylW4Xhr6hDIJIms-Vn9OLno7D/view?usp=sharing',
     },
     {
       name: 'Pulses - The health tracker',
@@ -19,7 +20,10 @@ export const Projects = ({ sectionRef }) => {
         'A 3-person project that provides a web-based personal dashboard to visualize heart rate and blood oxygen saturation level measured from an IoT-enabled management board of Particle.',
       photoName: 'pulses-project.png',
       tech: 'MongoDB,Node,Express,jQuery,Plotly.js',
-      report: 'haha',
+      report:
+        'https://docs.google.com/document/d/13-IQQG7I4ile9W8B4QoKFX30se48GQ0ZcCzXuCqxFYg/edit?usp=sharing',
+      demo: 'https://clipchamp.com/watch/0stCxYWBzli',
+      href: 'https://github.com/sonmac1203/health-rate-monitor',
     },
 
     {
@@ -28,6 +32,7 @@ export const Projects = ({ sectionRef }) => {
         'A personal project featuring a React-Firebase web app that enables all-in-one content management on Facebook and Instagram for restaurant and shop owners.',
       photoName: 'socialhub-project.png',
       tech: 'React,Firebase,Facebook Graph API',
+      href: 'https://github.com/sonmac1203/Social-media-dashboard',
     },
 
     {
@@ -36,6 +41,7 @@ export const Projects = ({ sectionRef }) => {
         'Simulated Java-powered restaurant administration tool for managers/chefs, and customers to perform different kinds of real-life tasks such as managing staff and ordering food.',
       photoName: 'restaurant-project.png',
       tech: 'Java, Swing',
+      href: 'https://github.com/sonmac1203/Restaurant_System',
     },
 
     {
@@ -44,6 +50,7 @@ export const Projects = ({ sectionRef }) => {
         'A deployed website serving as the birthday present for my partner featuring creating a photo gallery, marking memorable events, exchanging notes, and keeping track of elapsed time.',
       photoName: 'betweenus-project.png',
       tech: 'React,Express,Node,MongoDB',
+      href: 'https://github.com/sonmac1203/birthday-app',
     },
   ];
   const { setCurrentSection } = useContext(SectionObserverContext);
@@ -70,6 +77,9 @@ export const Projects = ({ sectionRef }) => {
             photoName={p.photoName}
             tech={p.tech}
             report={p.report || null}
+            demo={p.demo || null}
+            href={p.href || null}
+            key={k}
           />
         ))}
       </ul>

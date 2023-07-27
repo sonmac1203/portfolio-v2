@@ -21,7 +21,7 @@ export const About = ({ sectionRef }) => {
   const extendButton = (
     <span
       onClick={() => setExtended(true)}
-      className='text-ivory font-normal cursor-pointer'
+      className='text-ivory font-normal cursor-pointer hover:underline hover:underline-offset-4'
     >
       read more
     </span>
@@ -30,7 +30,7 @@ export const About = ({ sectionRef }) => {
   const shrinkButton = (
     <span
       onClick={() => setExtended(false)}
-      className='text-ivory font-normal cursor-pointer'
+      className='text-brightred font-normal cursor-pointer'
     >
       Close <i className='fa-solid fa-xmark' />
     </span>
@@ -52,8 +52,15 @@ export const About = ({ sectionRef }) => {
         <span className='text-bright font-normal'>frontend-focused</span> tech,
         I can tackle <span className='text-bright font-normal'>fullstack</span>{' '}
         projects with confidence. Recently, I kick-started my post-grad career
-        at <span className='text-ivory font-normal'>kmap.arizona.edu</span>,
-        where we develop{' '}
+        at{' '}
+        <a
+          className='text-ivory font-normal hover:text-bright'
+          href='https://kmap.arizona.edu/'
+          target='_blank'
+        >
+          kmap.arizona.edu
+        </a>
+        , where we develop{' '}
         <span className='text-ivory font-normal'>
           cutting-edge visualizations
         </span>{' '}
@@ -70,8 +77,14 @@ export const About = ({ sectionRef }) => {
           software engineering/frontend developer
         </span>{' '}
         starting in 2024. Check out my{' '}
-        <span className='text-bright font-normal'>resume</span>, or{' '}
-        {extendButton} about me.
+        <a
+          className='text-bright font-normal'
+          href='/Resume_SonMac.pdf'
+          target='_blank'
+        >
+          resume
+        </a>
+        , or {extendButton} about me.
       </p>
       {extended && (
         <>
