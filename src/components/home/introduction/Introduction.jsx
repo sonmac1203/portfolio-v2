@@ -27,7 +27,7 @@ export const Introduction = () => {
       <div>
         <a
           className='text-bright flex items-center gap-x-2 font-light group'
-          href='/resume.pdf'
+          href='/Resume_SonMac.pdf'
           target='_blank'
         >
           My resume{' '}

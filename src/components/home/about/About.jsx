@@ -79,7 +79,7 @@ export const About = ({ sectionRef }) => {
         starting in 2024. Check out my{' '}
         <a
           className='text-bright font-normal'
-          href='/resume.pdf'
+          href='/Resume_SonMac.pdf'
           target='_blank'
         >
           resume
