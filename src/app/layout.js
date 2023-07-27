@@ -7,6 +7,13 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Son Mac | Personal website',
   description: 'Personal website of Son Mac',
+  keywords: [
+    'Next.js',
+    'Software Engineering',
+    'Personal website',
+    'Tailwind CSS',
+  ],
+  creator: 'Son Mac',
 };
 
 export default function RootLayout({ children }) {
@@ -18,6 +25,10 @@ export default function RootLayout({ children }) {
           src='https://kit.fontawesome.com/ead8c78b5a.js'
           crossOrigin='anonymous'
           strategy='afterInteractive'
+        />
+        <meta
+          property='og:image'
+          content='https://drive.google.com/uc?id=10SqUacEbE7gWVBzBGVBaqf6Kq353E8n-'
         />
       </head>
       <body
