@@ -45,14 +45,14 @@ export const About = ({ sectionRef }) => {
       <SectionTitle>About</SectionTitle>
       <p>
         Hi! I am Son Mac, a{' '}
-        <span className='text-ivory font-normal'>recent graduate</span> from
+        <span className="text-ivory font-norma'l">recent graduate</span> from
         University of Arizona. I like{' '}
         <span className='text-ivory font-normal'>software</span>, and I enjoy
-        building things that improve people's life. While my experties lies in{' '}
-        <span className='text-bright font-normal'>frontend-focused</span> tech,
-        I can tackle <span className='text-bright font-normal'>fullstack</span>{' '}
-        projects with confidence. Recently, I kick-started my post-grad career
-        at{' '}
+        building things that improve people&apos;s life. While my experties lies
+        in <span className='text-bright font-normal'>frontend-focused</span>{' '}
+        tech, I can tackle{' '}
+        <span className='text-bright font-normal'>fullstack</span> projects with
+        confidence. Recently, I kick-started my post-grad career at{' '}
         <a
           className='text-ivory font-normal hover:text-bright'
           href='https://kmap.arizona.edu/'
@@ -89,8 +89,8 @@ export const About = ({ sectionRef }) => {
       {extended && (
         <>
           <p>
-            While it seems easy to talk about my passion now, it was not like
-            this at first. I started out as a Civil Engineering major in
+            While it seems easy to talk about my passion now, it wasn&apos;t
+            like this at first. I started out as a Civil Engineering major in
             college, without knowing much about what I wanted to do with my
             future. However, everything changed after an introductory C course I
             attended in the second semester. As slow-witted as I was back then,
