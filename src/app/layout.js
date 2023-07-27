@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='bg-indigo'>
       <head>
         <Script
           async
@@ -20,7 +20,11 @@ export default function RootLayout({ children }) {
           strategy='afterInteractive'
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} text-ash bg-gradient-to-r from-gunmetal via-prussian to-gunmetal`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

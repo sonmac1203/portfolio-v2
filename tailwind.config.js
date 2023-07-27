@@ -22,6 +22,7 @@ module.exports = {
       alabaster: '#EEF0EB',
       bright: '#a3d590',
       gunmetal: '#0F232F',
+      brightred: '#ce4257',
     },
   },
   plugins: [],
