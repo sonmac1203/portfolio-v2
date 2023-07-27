@@ -48,7 +48,7 @@ export const About = ({ sectionRef }) => {
         <span className="text-ivory font-norma'l">recent graduate</span> from
         University of Arizona. I like{' '}
         <span className='text-ivory font-normal'>software</span>, and I enjoy
-        building things that improve people&apos;s life. While my experties lies
+        building things that improve people&apos;s life. While my expertise lies
         in <span className='text-bright font-normal'>frontend-focused</span>{' '}
         tech, I can tackle{' '}
         <span className='text-bright font-normal'>fullstack</span> projects with
@@ -74,7 +74,7 @@ export const About = ({ sectionRef }) => {
         I am seeking a <span className='text-ivory font-normal'>full-time</span>{' '}
         opportunity in{' '}
         <span className='text-bright font-normal'>
-          software engineering/frontend developer
+          software engineering/frontend development
         </span>{' '}
         starting in 2024. Check out my{' '}
         <a
