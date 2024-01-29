@@ -16,7 +16,7 @@ export const About = ({ sectionRef }) => {
     window.removeEventListener('scroll', handleScroll);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [sectionRef, setCurrentSection]);
 
   const extendButton = (
     <span
@@ -45,38 +45,25 @@ export const About = ({ sectionRef }) => {
       <SectionTitle>About</SectionTitle>
       <p>
         Hi! I am Son Mac, a{' '}
-        <span className="text-ivory font-norma'l">recent graduate</span> from
-        University of Arizona. I like{' '}
-        <span className='text-ivory font-normal'>software</span>, and I enjoy
-        building things that improve people&apos;s life. While my expertise lies
-        in <span className='text-bright font-normal'>frontend-focused</span>{' '}
-        tech, I can tackle{' '}
-        <span className='text-bright font-normal'>fullstack</span> projects with
-        confidence. Recently, I kick-started my post-grad career at{' '}
-        <a
-          className='text-ivory font-normal hover:text-bright'
-          href='https://kmap.arizona.edu/'
-          target='_blank'
-        >
-          kmap.arizona.edu
-        </a>
-        , where we develop{' '}
-        <span className='text-ivory font-normal'>
-          cutting-edge visualizations
-        </span>{' '}
-        for academic communities.
+        <span className='text-ivory font-normal'>software engineer</span> and a{' '}
+        <span className='text-ivory font-normal'>graduate</span> from University
+        of Arizona. I like{' '}
+        <span className='text-ivory font-normal'>software</span> and I love
+        building things that improve lives. While my expertise lies in{' '}
+        <span className='text-bright font-normal'>frontend-focused</span> tech,
+        I&apos;m always motivated to take on{' '}
+        <span className='text-bright font-normal'>fullstack</span> projects.
+        With my work at the{' '}
+        <span className='text-vantapurple font-medium'>Llama</span>, I strive to
+        make the <span className='text-ivory font-normal'>Internet</span> a
+        safer place for everybody.
       </p>
       <p>
         When I am not on my laptop, I enjoy playing with my cat, drinking boba,
         going on road trips, and spending weekends camping with my girlfriend.
       </p>
       <p>
-        I am seeking a <span className='text-ivory font-normal'>full-time</span>{' '}
-        opportunity in{' '}
-        <span className='text-bright font-normal'>
-          software engineering/frontend development
-        </span>{' '}
-        starting in 2024. Check out my{' '}
+        Feel free to check out my{' '}
         <a
           className='text-bright font-normal'
           href='/Resume_SonMac.pdf'
@@ -98,7 +85,7 @@ export const About = ({ sectionRef }) => {
             especially the code that hide behind those great applications.
           </p>
           <p>
-            Since then, I had built a computer processor in{' '}
+            Since then, I&apos;ve built a computer processor in{' '}
             <span className='text-ivory font-normal'>Assembly</span>, developed
             applications in{' '}
             <span className='text-ivory font-normal'>
@@ -113,9 +100,14 @@ export const About = ({ sectionRef }) => {
             <span className='text-ivory font-normal'>Shopify</span>, and almost
             won the{' '}
             <span className='text-ivory font-normal'>Best Software Design</span>{' '}
-            award in an engineering contest in my senior year. At the moment, I
-            am working to transform how academic programs and individuals
-            visualize data. {shrinkButton}
+            award in an engineering contest in my senior year. After 2 years of
+            helping to transform how academic programs and individuals{' '}
+            <span className='text-ivory font-normal'>visualize data</span>,
+            I&apos;m now contributing to{' '}
+            <span className='text-ivory font-normal'>
+              secure digital footprints
+            </span>{' '}
+            for organizations of all sizes. {shrinkButton}
           </p>
         </>
       )}
