@@ -65,7 +65,8 @@ export const Projects = ({ sectionRef }) => {
     window.removeEventListener('scroll', handleScroll);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [sectionRef, setCurrentSection]);
+
   return (
     <section id='projects' className='pt-12 md:pt-20' ref={sectionRef}>
       <SectionTitle className='mb-6'>Projects</SectionTitle>
