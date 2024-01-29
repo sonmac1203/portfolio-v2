@@ -10,8 +10,12 @@ export const Introduction = () => {
       </Link>
       <h2 className='text-lg text-ivory'>
         Software engineer @{' '}
-        <a href='https://kmap.arizona.edu' target='_blank'>
-          KMap
+        <a
+          href='https://www.vanta.com/'
+          target='_blank'
+          className='text-vantapurple font-semibold'
+        >
+          Vanta, Inc. &#129433;
         </a>
       </h2>
       <h3>
